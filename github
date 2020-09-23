@@ -1,3 +1,20 @@
 버전관리 시스템 : https://opentutorials.org/module/3963/24328
 구글검색 :  http://jekyllthemes.org/
         http://jekyllthemes.org/themes/jekyll-theme-chirpy/
+        jekyll-theme-chirpy에서 환경설정
+        maenginsuk.github.io <-- 리네임
+        
+        
+        _config.yml   : 메인화면 제어
+        _posts/       : 게시글  .md
+                ---
+                title: Customize the Favicon
+                author: Cotes Chung
+                date: 2019-08-11 00:34:00 +0800
+                categories: [Blogging, Tutorial]
+                tags: [favicon]
+                toc: false
+                ---
+                
+                
+                파일이름 2020-09-23.title.md <-- 양식에 맞게
