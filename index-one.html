@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Hamburger Menu Icon to Cross</title>
+
+<link rel="stylesheet" href="./css/normalize.css">
+<!-- <link rel="stylesheet" href="./css/main.css"> -->
+<style>
+    body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+    }
+
+    /* 1. Style the hamburger button. */
+    .hamburger-button {
+        position: relative;
+        transition: .3s ease-in-out;
+        width: 45px;
+        height: 34px;
+    }
+    /* span */
+    .hamburger-button span {
+        position: absolute;
+        height: 8px;
+        border-radius: 4px;
+        width: 100%;
+        background:#3d4146;
+        top:0;
+        transition:all 0.2s;
+    }
+    /* :nth-child() 이용해서 각각의 높이, 2/3 번째는 겹쳐있게 */
+    .hamburger-button span:nth-child(1){top:0;}
+    .hamburger-button span:nth-child(2),.hamburger-button span:nth-child(3){top:13px;}
+    .hamburger-button span:nth-child(4){top:26px;}
+
+    /* css에서 설계하고, jquery로 */
+    .hamburger-button.active span:nth-child(1),.hamburger-button.active span:nth-child(4) {opacity: 0;}
+    .hamburger-button.active span:nth-child(2){
+        transform:rotate(45deg);
+    }
+    .hamburger-button.active span:nth-child(3){
+        transform:rotate(-45deg);
+    }
+</style>
+<script src="./js/vendor/jquery-1.10.2.min.js"></script>
+<script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<!-- <script src="./js/main.js"></script> -->
+<script>
+    $(function(){
+    $('.hamburger-button').click(function(ev){
+        // 빈링크(새로고침)가 걸리지 않게 기본속성을 막고
+        ev.preventDefault();
+        $(this).toggleClass('active');
+    });
+})
+</script>
+</head>
+<body>
+    <a href="#" class="hamburger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+</body>
+</html>
