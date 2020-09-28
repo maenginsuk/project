@@ -1,0 +1,28 @@
+//숫자 애니메이션
+    var $counterThreshold = $counters.offset().top - $offset;
+    
+        
+
+        if($currentSct > $counterThreshold){
+
+            if(!$counterExecuted){
+                $counterData.each(function(){
+                    var $current = $(this);
+                    var $target = $current.attr('data-rate');
+                    //animate, progress, rate 
+                    $({rate: 0}).animate({rate :$target },{
+                        duration: 2500,
+                        progress:function(){
+                            var now = this.rate;
+                            $current.text(Math.ceil(now));
+                        }
+                    });
+                });
+                $counterExecuted = true;   
+                console.log($counterExecuted);             
+            } //counterExecuted if
+        }//scroll if
+
+
+
+    });// scroll event
