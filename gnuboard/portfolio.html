@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio Theme</title>
+	<meta name="description" content="An HTML portfolio theme built for a Tuts+ course">
+	<meta name="author" content="Adi Purdila">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script src="js/jquery.cycle2.min.js"></script>
+	<script src="js/jquery.cycle2.carousel.min.js"></script>
+</head>
+<body>
+
+<header class="main-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<h1 class="logo"><a href="index.html">Logo</a></h1>
+			</div>
+			<div class="col-md-8 col-sm-8 col-xs-12">
+				<nav class="main-nav">
+					<ul>
+						<li><a href="index.html">home</a></li>
+						<li><a href="portfolio.html">portfolio</a></li>
+						<li><a href="about.html">about</a></li>
+					</ul>
+				</nav>
+			</div>			
+		</div>
+	</div>
+</header>
+<!-- subpage banner  시작-->
+<section class="page-banner" id="page-portfolio">
+</section>
+<!-- subpage banner  끝 -->
+
+<section class="container main-content">
+	<div class="title-wrapper">
+		<header class="fancy-box fancy-grey">
+			<h1>portfolio</h1>
+		</header>
+	</div>
+	<h3>Current project</h3>
+	<h2>Project name</h2>
+	<p class="narrow-p">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+	</p>
+	<hr>
+	<div class="project-nav clearfix">
+		<a href="#" class="project-nav-left"> &larr; previous project</a>
+		<a href="#" class="project-nav-right">next project &rarr;</a>
+	</div>
+	
+
+	<div class="cycle-slideshow project_list" 
+		data-cycle-fx="scrollHorz" 
+		data-cycle-timeout="0"
+		id="portfolio-slider">
+		<div class="cycle-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+		<div class="cycle-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+		<img src="images/slide-1-bg.jpg" alt="slide1">
+		<img src="images/slide-2-bg.jpg" alt="slide2">
+		<img src="images/slide-3-bg.jpg" alt="slide3">
+		</div><!-- cycle-slideshow -->
+
+
+</section>
+
+<footer>
+	<i class="fancy-box fancy-yellow fa fa-envelope" aria-hidden="true"></i>
+	<div class="footer-contents">
+		<p class="narrow-p">
+		Wanna see my latest photos? Enter your email below and I'll send you one email a month with the latest updates.
+		</p>
+		<form id="footer-subscription">
+			<label class="hidden" for="userEmail">Email</label>
+			<input id="userEmail" type="email" placeholder="Your email address" name="userEmail" value="">
+			<input type="submit" class="btn" value="subscribe">			
+		</form>
+	</div>
+	<div class="container footer-bottom">
+		<p>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		</p>
+		<p>
+			&copy; 2016 Geen art computer
+		</p>
+	</div>
+	
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
